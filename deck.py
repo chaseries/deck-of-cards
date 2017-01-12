@@ -1,6 +1,5 @@
 #!/usr/local/bin/python3
-from utils import *
-
+import utils
 import random
 
 
@@ -9,12 +8,12 @@ class Card:
   def __init__(self, name, suit, discarded=False):
     self.name = name
     self.suit = suit
-    self.rank = card_name_rank_map[name]
+    self.rank = utils.card_name_rank_map[name]
     self.discarded = discarded
 
   def __repr__(self):
-    repr_ = "<Card object> Name: {}, Suit: {}".format(self.name, self.suit)
-    return repr_
+    return "{} {}".format(utils.card_rank_repr_map[self.rank], 
+                          utils.suit_name_repr_map[self.suit])
 
   # This might be better on Deck
   def discard(self):
@@ -36,7 +35,11 @@ class Card:
 class Deck:
 
   def __init__(self):
-    self.cards = [ Card(n, s) for s in suit_names for n in card_names ]
+    self.cards = [ 
+      Card(n, s) 
+      for s in utils.suit_names 
+      for n in utils.card_names 
+    ]
 
   def __iter__(self):
     for card in self.cards:
