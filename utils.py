@@ -22,8 +22,14 @@ suit_names = [
   'diamonds'
   ]
 
-card_name_rank_map = dict(zip(card_names, list(range(1,14))))
+card_ranks = list(range(2,15))
 
-suit_name_rank_map = dict(zip(suit_names, list(range(1,4))))
+card_rank_reprs = list(map(str, range(2,11))) + (['J', 'Q', 'K', 'A'])
 
+suit_reprs = [ '♠', '♥', '♣', '♦' ]
 
+card_name_rank_map = dict(zip(card_names, card_ranks))
+
+card_rank_repr_map = dict(zip(card_ranks, card_rank_reprs))
+
+suit_name_repr_map = dict(zip(suit_names, suit_reprs))
