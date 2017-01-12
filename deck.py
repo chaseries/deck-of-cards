@@ -35,13 +35,8 @@ class Card:
 
 class Deck:
 
-  suit_names = [ 'diamonds', 'clubs', 'hearts', 'spades' ]
-
   def __init__(self):
-    self.cards = [ Card(n, s) for s in self.suit_names for n in card_names ]
-
-  def __repr__(self):
-    raise NotImplementedError # Not sure yet
+    self.cards = [ Card(n, s) for s in suit_names for n in card_names ]
 
   def __iter__(self):
     for card in self.cards:
