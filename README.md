@@ -15,3 +15,5 @@ $    for i in a_list:
 $    a_list
 >    [2,4]
 ```
+
+Here's the [relevent documentation](https://docs.python.org/2/reference/compound_stmts.html#the-for-statement) (see the **Note**).
