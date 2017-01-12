@@ -2,7 +2,7 @@
 
 A deck of cards implemented in Python.
 
-Hi, Austin. This is my version. I changed some stuff around that I can explain to you on the phone if you'd like. I spent some time on it because I thought it was a pretty interesting little challenge. Managing the state `Card` and `Deck` while the API depends on some abstract idea of a suit was an interesting little challenge.
+Hi, Austin. This is my version. I changed some stuff around that I can explain to you on the phone if you'd like. I spent some time on it because I thought it was a pretty interesting little challenge. Managing the state `Card` and `Deck` while the API depends on some abstract idea of a suit was tricky, but I think I got close to a good start.
 
 So, if you're interested, check out the code in `deck.py`.
 
