@@ -9,17 +9,29 @@ class Card:
   def __init__(self, name, suit, discarded=False):
     self.name = name
     self.suit = suit
-    self.value = card_name_rank_map[name]
+    self.rank = card_name_rank_map[name]
     self.discarded = discarded
-
-  # This might be better on Deck
-  def discard(self):
-    self.discarded = True
 
   def __repr__(self):
     repr_ = "<Card object> Name: {}, Suit: {}".format(self.name, self.suit)
     return repr_
+
+  # This might be better on Deck
+  def discard(self):
+    self.discarded = True
   
+  def __eq__(self, other):
+    raise NotImplementedError
+
+  def __ne__(self, other):
+    raise NotImplementedError
+
+  def __lt__(self, other):
+    raise NotImplementedError
+
+  def __gt__(self, other):
+    raise NotImplementedError
+
 
 class Deck:
 
